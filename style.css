@@ -75,3 +75,30 @@ body.dark input, body.dark textarea{background:#0b0b0b;border:1px solid rgba(255
   .nav-links{display:none}
   .logo{height:46px}
 }
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+}
