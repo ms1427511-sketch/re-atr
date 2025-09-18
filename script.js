@@ -1,5 +1,12 @@
-
-const translations={en:{home:'Home',about:'About Us',services:'Services',contact:'Contact',careers:'Careers',blog:'Blog',hero_title:'Professional Cleaning, Security & Maintenance Services',hero_sub:'We keep your spaces clean, safe, and efficient.',request_quote:'Request a Quote',about_title:'About Us',about_text:'A.T.R Multiservice provides professional cleaning, security and maintenance solutions tailored to clients’ needs.',services_title:'Our Services',contact_title:'Contact Us',contact_email:'Email: info@atrmultiservice.com',contact_phone:'Phone: +39 123 456 789'},it:{home:'Home',about:'Chi siamo',services:'Servizi',contact:'Contatti',careers:'Lavora con noi',blog:'Blog',hero_title:'Servizi professionali di pulizia, sicurezza e manutenzione',hero_sub:'Manteniamo i tuoi spazi puliti, sicuri ed efficienti.',request_quote:'Richiedi un preventivo',about_title:'Chi siamo',about_text:'A.T.R Multiservice fornisce soluzioni professionali di pulizia, sicurezza e manutenzione su misura per i clienti.',services_title:'I nostri servizi',contact_title:'Contattaci',contact_email:'Email: info@atrmultiservice.com',contact_phone:'Telefono: +39 123 456 789'}};
-let currentLang=localStorage.getItem('atr_lang')||'en';
-function setLang(lang){currentLang=lang;localStorage.setItem('atr_lang',lang);document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.getAttribute('data-i18n');if(translations[lang]&&translations[lang][key]) el.innerHTML=translations[lang][key];});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));}
-document.addEventListener('DOMContentLoaded',()=>{setLang(currentLang);document.querySelectorAll('.lang-btn').forEach(b=>{b.addEventListener('click',()=>setLang(b.dataset.lang));});const toggle=document.querySelector('#modeToggle');toggle.addEventListener('click',()=>{document.documentElement.classList.toggle('dark');toggle.textContent=document.documentElement.classList.contains('dark')?'Light':'Dark';});});
+document.addEventListener("DOMContentLoaded", () => {
+  const langToggle = document.getElementById("lang-toggle");
+  langToggle.addEventListener("click", () => {
+    if (langToggle.textContent === "AR") {
+      langToggle.textContent = "EN";
+      alert("Arabic translation coming soon!");
+    } else {
+      langToggle.textContent = "AR";
+      alert("Back to English!");
+    }
+  });
+});

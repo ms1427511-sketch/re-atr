@@ -3,30 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A.T.R Multiservice</title>
+  <title>Contact - A.T.R Multiservice</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header>
-  <div class="header-container">
-    <img src="logo.png" alt="A.T.R Multiservice Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+  <header>
+    <nav class="navbar">
+      <img src="images/logo.png" alt="A.T.R Logo" class="logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="lang-toggle">AR</button>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <h2>Contact Us</h2>
-  <p>Email: info@atrmultiservice.com</p>
-  <p>Phone: (123) 456-7890</p>
-</main>
+  <main>
+    <section class="content">
+      <h1>Contact Us</h1>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message"></textarea>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2025 A.T.R Multiservice S.R.L.S | All Rights Reserved</p>
-</footer>
+  <footer>
+    <p>&copy; 2025 A.T.R Multiservice - All rights reserved.</p>
+  </footer>
 </body>
 </html>
