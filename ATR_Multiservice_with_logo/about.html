@@ -1,0 +1,73 @@
+
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chi siamo — A.T.R Multiservice</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <img src="images/logo.png" class="logo" alt="A.T.R Logo">
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" class="nav-link" data-key="home">Home</a>
+      <a href="about.html" class="nav-link" data-key="about">Chi siamo</a>
+      <a href="services.html" class="nav-link" data-key="services">I nostri servizi</a>
+      <a href="contact.html" class="nav-link" data-key="contact">Contatti</a>
+    </nav>
+    <div class="lang-actions">
+      <button class="icon-btn" data-lang="it" title="Italiano">🇮🇹 IT</button>
+      <button class="icon-btn" data-lang="en" title="English">🇬🇧 EN</button>
+      <button id="dark-toggle" class="icon-btn" title="Dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="about" style="padding-top:40px;">
+    <h1>Chi siamo</h1>
+    <p>Questo spazio contiene molti placeholder per farti inserire tutte le informazioni che vuoi:</p>
+    <h3>Storia</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, repellat.</p>
+    <h3>Missione</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, repellat.</p>
+    <h3>Visione</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, repellat.</p>
+    <h3>Team</h3>
+    <p>Placeholder per i membri del team — nome, ruolo, breve bio.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2025 A.T.R Multiservice — Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+
+<script>
+// Inline fallback: if external siteAPI not present, attach minimal handlers.
+(function(){
+  function safe(q){ return document.querySelectorAll(q); }
+  // attach click to [data-lang] to set localStorage and reload (fallback)
+  document.addEventListener('click', function(e){
+    const t = e.target.closest('[data-lang]');
+    if(t){
+      var L = t.getAttribute('data-lang');
+      try{ if(window.siteAPI && window.siteAPI.applyLanguage){ window.siteAPI.applyLanguage(L); } else { localStorage.setItem('site_lang', L); location.reload(); } } catch(err){ localStorage.setItem('site_lang', L); location.reload(); }
+      e.preventDefault();
+    }
+    const d = e.target.closest('#dark-toggle');
+    if(d){
+      try{ if(window.siteAPI && window.siteAPI.toggleDark){ window.siteAPI.toggleDark(); } else { document.body.classList.toggle('dark'); localStorage.setItem('site_dark', document.body.classList.contains('dark') ? '1' : '0'); } }catch(err){ document.body.classList.toggle('dark'); localStorage.setItem('site_dark', document.body.classList.contains('dark') ? '1' : '0'); }
+      e.preventDefault();
+    }
+  }, true);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --text: #111111;
+  --muted: #6b6b6b;
+  --accent: #c89a2a; /* gold-ish */
+  --dark-bg: #0b0b0b;
+  --dark-surface: #121212;
+  --dark-text: #eaeaea;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;}
+.container{max-width:1100px;margin:0 auto;padding:0 20px;}
+
+/* Header */
+.header{background:var(--surface);border-bottom:1px solid rgba(0,0,0,0.06);position:sticky;top:0;z-index:30;}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+.logo{height:56px;}
+.nav-links{display:flex;gap:18px;align-items:center;}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px;}
+.nav-links a:hover{background:rgba(0,0,0,0.04);color:var(--accent);}
+.lang-actions{display:flex;gap:10px;align-items:center;}
+.btn{background:var(--accent);color:var(--dark-bg);border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;}
+.icon-btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:8px;border-radius:8px;cursor:pointer;}
+
+/* Hero */
+.hero{display:flex;gap:30px;align-items:center;padding:60px 0;}
+.hero .left{flex:1;}
+.hero h1{font-size:2.2rem;margin:0 0 12px;}
+.hero p{color:var(--muted);line-height:1.6;margin:0 0 18px;}
+.hero .cta{display:flex;gap:12px;align-items:center;}
+.hero .cta .btn{padding:12px 18px;font-size:1rem;}
+.hero .right{flex:1;text-align:center;}
+.hero-visual{width:100%;max-width:420px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.08);overflow:hidden;background:linear-gradient(180deg,rgba(0,0,0,0.02),rgba(0,0,0,0.02));}
+
+/* Services grid */
+.services{padding:40px 0;}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px;margin-top:18px;}
+.card{background:var(--bg);border-radius:12px;padding:18px;box-shadow:0 6px 18px rgba(16,16,16,0.06);transition:transform .18s ease,box-shadow .18s ease;}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(16,16,16,0.12);}
+.card .icon{width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.02));}
+.card h3{margin:0 0 8px;font-size:1.05rem;}
+.card p{margin:0;color:var(--muted);font-size:0.95rem;}
+
+/* Testimonials */
+.testimonials{padding:40px 0;background:linear-gradient(180deg,rgba(0,0,0,0.01),rgba(0,0,0,0.01));border-radius:12px;margin-top:18px;padding:30px;}
+.testimonial{padding:18px;border-radius:8px;background:var(--surface);margin-bottom:12px;}
+
+/* About */
+.about{padding:40px 0;}
+
+/* Contact */
+.contact{padding:40px 0;}
+.contact form{display:grid;gap:12px;max-width:600px;}
+input,textarea{padding:12px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);font-family:inherit;}
+textarea{min-height:120px;resize:vertical;}
+
+/* Footer */
+footer{padding:28px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(0,0,0,0.04);margin-top:40px;}
+
+/* Dark mode */
+body.dark{background:var(--dark-bg);color:var(--dark-text)}
+body.dark .header{background:var(--dark-surface);border-bottom-color:rgba(255,255,255,0.04)}
+body.dark .nav-links a{color:var(--dark-text)}
+body.dark .card{background:#0f0f0f;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+body.dark .testimonial{background:#0b0b0b}
+body.dark input, body.dark textarea{background:#0b0b0b;border:1px solid rgba(255,255,255,0.06);color:var(--dark-text)}
+
+@media (max-width:800px){
+  .hero{flex-direction:column;text-align:center;}
+  .nav-links{display:none}
+  .logo{height:46px}
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  border-bottom: 2px solid #eee;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.site-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+}
