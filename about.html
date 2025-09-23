@@ -1,57 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A.T.R Multiservice</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - A.T.R Multiservice</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" class="logo" alt="A.T.R Logo" />
-        <span class="name i18n" data-key="brand">A.T.R Multiservice</span>
-      </a>
-      <nav id="siteNav" class="nav">
-        <ul>
-          <li><a class="i18n" data-key="nav.home" href="index.html">Home</a></li>
-          <li><a class="i18n" data-key="nav.about" href="about.html">About</a></li>
-          <li><a class="i18n" data-key="nav.services" href="services.html">Services</a></li>
-          <li><a class="i18n" data-key="nav.contact" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="controls">
-        <button class="lang-button" data-lang="en">EN</button>
-        <button class="lang-button" data-lang="it">IT</button>
-        <button id="themeToggle" class="icon-button" aria-pressed="false" aria-label="Toggle theme">🌙</button>
-        <button id="burger" class="icon-button hamburger" aria-label="Menu" aria-expanded="false">☰</button>
-      </div>
-    </div>
+  <header>
+    <nav class="navbar">
+      <img src="images/logo.png" alt="A.T.R Logo" class="logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="lang-toggle">AR</button>
+    </nav>
   </header>
 
-  <main class="container">
-    
-<section class="page">
-  <h2 class="i18n" data-key="about.title">About A.T.R Multiservice</h2>
-  <p class="i18n" data-key="about.body">We deliver practical, no‑nonsense services across cleaning, security and construction. Our approach is simple: plan clearly, execute safely, finish on time.</p>
-  <h3 class="i18n" data-key="about.values">What we value</h3>
-  <ul class="list">
-    <li class="i18n" data-key="about.v1">Professional teams and clear supervision.</li>
-    <li class="i18n" data-key="about.v2">Transparent pricing and timelines.</li>
-    <li class="i18n" data-key="about.v3">Safety-first culture and quality checks.</li>
-  </ul>
-</section>
-
+  <main>
+    <section class="content">
+      <h1>About Us</h1>
+      <p>A.T.R Multiservice is dedicated to providing high-quality services to our clients.</p>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small class="i18n" data-key="footer.copy">© 2025 A.T.R Multiservice. All rights reserved.</small>
-    </div>
+  <footer>
+    <p>&copy; 2025 A.T.R Multiservice - All rights reserved.</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>

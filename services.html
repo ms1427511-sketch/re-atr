@@ -1,80 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A.T.R Multiservice</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - A.T.R Multiservice</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" class="logo" alt="A.T.R Logo" />
-        <span class="name i18n" data-key="brand">A.T.R Multiservice</span>
-      </a>
-      <nav id="siteNav" class="nav">
-        <ul>
-          <li><a class="i18n" data-key="nav.home" href="index.html">Home</a></li>
-          <li><a class="i18n" data-key="nav.about" href="about.html">About</a></li>
-          <li><a class="i18n" data-key="nav.services" href="services.html">Services</a></li>
-          <li><a class="i18n" data-key="nav.contact" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="controls">
-        <button class="lang-button" data-lang="en">EN</button>
-        <button class="lang-button" data-lang="it">IT</button>
-        <button id="themeToggle" class="icon-button" aria-pressed="false" aria-label="Toggle theme">🌙</button>
-        <button id="burger" class="icon-button hamburger" aria-label="Menu" aria-expanded="false">☰</button>
-      </div>
-    </div>
+  <header>
+    <nav class="navbar">
+      <img src="images/logo.png" alt="A.T.R Logo" class="logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button id="lang-toggle">AR</button>
+    </nav>
   </header>
 
-  <main class="container">
-    
-<section class="page">
-  <h2 class="i18n" data-key="services.title">Services</h2>
-
-  <section id="cleaning" class="section">
-    <div class="card">
-      <img src="images/cleaning.jpg" alt="Cleaning" />
-      <div class="body">
-        <h3 class="i18n" data-key="services.cleaning.title">Cleaning</h3>
-        <p class="i18n" data-key="services.cleaning.body">Daily/periodic cleaning for offices, stores, residences; deep cleaning; post-construction cleaning.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="security" class="section">
-    <div class="card">
-      <img src="images/security.jpg" alt="Security" />
-      <div class="body">
-        <h3 class="i18n" data-key="services.security.title">Security</h3>
-        <p class="i18n" data-key="services.security.body">Static guards, patrols, access control, CCTV monitoring and incident reporting.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="construction" class="section">
-    <div class="card">
-      <img src="images/construction.jpg" alt="Construction" />
-      <div class="body">
-        <h3 class="i18n" data-key="services.construction.title">Construction</h3>
-        <p class="i18n" data-key="services.construction.body">Fit‑out, finishing, repairs, small builds, and maintenance contracts.</p>
-      </div>
-    </div>
-  </section>
-</section>
-
+  <main>
+    <section class="content">
+      <h1>Our Services</h1>
+      <ul>
+        <li>Security & Surveillance</li>
+        <li>Maintenance & Repairs</li>
+        <li>Consulting</li>
+      </ul>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <small class="i18n" data-key="footer.copy">© 2025 A.T.R Multiservice. All rights reserved.</small>
-    </div>
+  <footer>
+    <p>&copy; 2025 A.T.R Multiservice - All rights reserved.</p>
   </footer>
-
-  <script src="js/script.js"></script>
 </body>
 </html>
